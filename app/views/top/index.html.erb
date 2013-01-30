@@ -1,0 +1,29 @@
+<div id="block_count">
+  <p>
+    残りゴミの数:<%= @blocks.count %>個
+  </p>
+</div>
+<% #TODO:もっといい書き方が知りたい %>
+<div id="canvas" style="width:<%= @canvas.w %>px; height:<%= @canvas.h %>px;">
+  <% @blocks.each do |block| %>
+  <%= image_tag("kanzume.png",
+      data: { :"block-id" => block.id },
+      style: "left: #{block.x}px; top: #{block.y}px",
+      alt: "block") %>
+  <% end %>
+  <%= image_tag("trash.png",
+      data: { :"trash-id" => @trash.id },
+      style: "left: #{@trash.x}px; top: #{@trash.y}px",
+      alt: "trash") %>
+</div>
+<div id="block_create_btn">
+  <button>create trash</button>
+</div>
+<% #change canvas size %>
+※　サイズを変更すると存在するゴミはすべて削除されます
+<form action="" method="GET">
+  w:<input type="text" name="size_w" style="width:100px;">x
+  h:<input type="text" name="size_h" style="width:100px;">
+  <input type="button" name="button" value="set canvas size" onClick="set_canvas_size(this.form)">
+  <span id="result" />
+</form>

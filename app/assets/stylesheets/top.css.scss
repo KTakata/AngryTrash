@@ -1,0 +1,23 @@
+div#canvas {
+  position: relative;
+  background-color: white;
+  border: 2px solid black;
+
+  img {
+      position: absolute;
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+    }
+}
+div#block_create_btn {
+}
+
+div#block_count {
+  position: relative;
+  width: 404px;
+  height: 50px;
+  background-color: silver;
+  border: 2px solid black;
+  text-align: center;
+}
