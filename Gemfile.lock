@@ -55,6 +55,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.5.0)
+    pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.11.4)
       coderay (~> 1.0.5)
@@ -115,6 +116,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
+  pg
   pry-rails
   rails (= 3.2.9)
   sass-rails (~> 3.2.3)
